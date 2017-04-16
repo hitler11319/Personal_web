@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <meta charset = "utf-8">
+  <head>
+    <title>創作理念</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--隨網站而變大變小-->
+    <style>
+      div.container {
+          width: 100%;
+          vertical-align: "center";
+      }
+      header {
+          padding: 1em;  /*與整個頁面的距離（1em是rwd的網頁）*/
+          clear: left;
+          height:70px;
+          width:760px;
+          background-image: url("img\\idea_title.png");
+          background-repeat: no-repeat;
+      }
+      footer {
+        padding: 1em;
+          color: white;
+          background-color: black;
+          clear: left;
+          text-align: center;
+          width:760px;
+          height:50px;
+      }
+      article {
+        border:1px solid gray;
+          padding: 1em;
+          overflow: hidden;
+          width:760px;
+          height:750px;
+          text-align: center;
+      }
+
+      body {
+        background-image:url("img\\background.png");
+        background-repeat:no-repeat;
+      }
+
+      table, tr, td {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+
+    <script>
+      function change_pic(){
+          document.getElementById('demo').innerHTML = parseInt(document.getElementById('demo').innerHTML) + 1;
+          if(parseInt(document.getElementById('demo').innerHTML) <= 6){
+            document.getElementById('show_pic').src="img"+ "\\" + "flash" + "\\" + "idea_" + document.getElementById('demo').innerHTML + ".png";
+          }
+          else{
+            document.getElementById('show').style.display = "block";
+            document.getElementById('index_show').style.display = "none";
+          }
+      }
+
+      function skip(){
+            document.getElementById('show').style.display = "block";
+            document.getElementById('index_show').style.display = "none";
+      }
+  </script>
+
+    <div class = "container" id = "show" style = "display:none">
+    <center><header></header></center>
+
+      <center><article>
+      <h1 style = "color:blue">創作動機：</h1>
+      <p>網頁製作期中個人網頁。</p>
+
+
+      <h1 style = "color:blue">主要元素：</h1>
+      <center><table>
+        <tr>
+          <td>
+            <ol>
+              <li>尋寶</li>
+              <li>海盜</li>
+              <li>遊戲化的劇情</li>
+            </ol>
+          </td>
+        </tr>
+      </table></center>
+
+      <h1 style = "color:blue">創作理念：</h1>
+      <p>這個網頁是我想把尋寶的概念加入的成品。以往只能按巡覽列上的按鈕來看其功能</p>
+      <p>那不如加入一些遊戲上面的劇情模式，來讓使用者感覺在做一些的劇情，順便依著</p>
+      <p>我定的順序來觀看（雖然你不照順序還是可以的），不過我更希望一步一步來看這</p>
+      <p>些劇情。這樣一來使用者不是只有觀看網頁上的功能，更可以深入劇情好好享受。</p>
+      <p>當然本人我功力沒有這麼高深。我的劇情也是單方面的而已，不會有太好的劇情來</p>
+      <p>讓各位觀賞。但是我也很認真在構想和實作了！大家就來看看吧！</p>
+
+      <br>
+
+      <p>會有如此的想法，是因為看著每個網頁都照版來切就覺得就算網頁很美很棒，其實</p>
+      <p>大家的版的差不多一樣。個人認為：網頁的重點應該是內容，而非表面進入首頁的</p>
+      <p>光鮮亮麗。所以我才會做成這種的風格，就是要讓使用者（或稱玩家）慢慢體會網</p>
+      <p>頁的樂趣。而不是做得如此炫的背景。</p>
+
+      <br>
+
+      <h1 style = "color:orange">下一站：猜謎遊戲   進度完成度：75%</h1>      
+      </article></center>
+        
+    <center><footer><p>本網站由B10409006盧禹宏製作</p></footer><center>
+    </div>
+
+        <div class = "content" id = "index_show">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <center><table>
+          <tr>
+            <td><img src = "img\flash\idea_1.png" id = "show_pic"></td>
+            <td><button type="button" onclick="change_pic()">繼續</button><br><br>
+            <button type="button" onclick="skip()">skip</button></td>
+          </tr>
+        </table></center>
+
+        <p id = "demo" style = "display:none">1</p>
+    </div>
+
+  </body>
+</html>

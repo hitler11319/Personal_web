@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<meta charset = "utf-8">
+	<head>
+		<title>個人介紹</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--隨網站而變大變小-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style>
+			div.container {
+    			width: 100%;
+    			vertical-align: "center";
+			}
+			header {
+    			padding: 1em;  /*與整個頁面的距離（1em是rwd的網頁）*/
+    			clear: left;
+    			height:102px;
+    			width:760px;
+    			background-image: url("img\\about_title.png");
+    			background-repeat: no-repeat;
+			}
+			footer {
+				padding: 1em;
+    			color: white;
+    			background-color: black;
+    			clear: left;
+    			text-align: center;
+    			width:760px;
+    			height:50px;
+			}
+			article {
+				border:1px solid gray;
+    			padding: 1em;
+    			overflow: hidden;
+    			width:760px;
+    			height:800px;
+    			text-align: center;
+			}
+
+			body {
+				background-image:url("img\\background.png");
+        background-repeat:no-repeat;
+			}
+
+			table, tr , td {
+				text-align: left;
+			}
+
+      table.bor, tr.bor, td.bor {
+        border: 1px solid gray;
+      }
+		</style>
+	</head>
+	<body>
+
+  <script>
+      function change_pic(){
+          document.getElementById('demo').innerHTML = parseInt(document.getElementById('demo').innerHTML) + 1;
+          if(parseInt(document.getElementById('demo').innerHTML) <= 5){
+            document.getElementById('show_pic').src="img"+ "\\" + "flash" + "\\" + "about_" + document.getElementById('demo').innerHTML + ".png";
+          }
+          else{
+            document.getElementById('show').style.display = "block";
+            document.getElementById('index_show').style.display = "none";
+          }
+      }
+
+      function skip(){
+            document.getElementById('show').style.display = "block";
+            document.getElementById('index_show').style.display = "none";
+      }
+  </script>
+
+
+		<div class = "container" id = "show" style = "display:none">
+		<center><header></header></center>
+
+			<center><article>
+					<h1>我是四資管二 盧禹宏</h1>
+  				<p>現在是台科資管二年級的學生，沒什麼興趣。沒事就在家當宅宅。</p>
+
+					<center><table class = "bor">
+  						<tr class = "bor">
+    						<td class = "bor">3個願望</td>
+    						<td class = "bor">最喜歡的一部電影</td>
+    						<td class = "bor">想去國家</td>
+    						<td class = "bor">興趣</td>
+  						</tr>
+  						<tr class = "bor">
+    						<td class = "bor">
+        						<ol style="float:left">
+         							<li>從台科大畢業</li>
+          							<li>多益550</li>
+          							<li>平安過完這一生</li>
+        						</ol>
+    						</td>
+    						<td class = "bor">
+        						<p>沒有、無感</p>
+    						</td>
+    						<td class = "bor">
+     							 <p>德國</p>
+    						</td>
+    						<td class = "bor">
+    							<ol> 
+    								<li>打遊戲</li>
+    								<li>打電腦</li>
+    								<li>當宅宅</li>
+  								</ol>
+    						</td>
+  						</tr>
+  					</table></center>
+
+            <br>
+				
+  					<p>我的照片：<img src="img\me.jpg" class="img-circle"></p>
+
+  					<br>
+
+            <h2>持有證照</h2>
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-success">電腦軟體應用乙級</li>
+                <li class="list-group-item list-group-item-info">電腦軟體應用丙級</li>
+                <li class="list-group-item list-group-item-warning">會計丙級</li>
+                <li class="list-group-item list-group-item-danger">中/英打</li>
+              </ul>
+
+              <br>
+
+  					<h1 style = "color:orange">下一站：生活照片   進度完成度：25%</h1>			
+			</article></center>
+				
+		<center><footer><p>本網站由B10409006盧禹宏製作</p></footer><center>
+		</div>
+
+    <div class = "content" id = "index_show">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <center><table>
+          <tr>
+            <td><img src = "img\flash\about_1.png" id = "show_pic"></td>
+            <td><button type="button" onclick="change_pic()">繼續</button><br><br>
+            <button type="button" onclick="skip()">skip</button></td>
+          </tr>
+        </table></center>
+
+        <p id = "demo" style = "display:none">1</p>
+    </div>
+	</body>
+</html>
